@@ -1,3 +1,5 @@
 fastapi[all]
-sqlalchemy
+sqlmodel
+typing
+datetime
 psycopg2-binary
