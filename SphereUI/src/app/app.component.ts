@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { MainSectionComponent } from '../components/main-section/main-section.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [MainSectionComponent],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'sphere-ui';
+
+  links: string[] = ['Home', 'TaskList', 'Completed'];
+
 }

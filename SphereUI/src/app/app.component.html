@@ -1,2 +1,12 @@
-<div>Welcome to sphere Ui</div>
-<app-main-section></app-main-section>
+<div class="main-container">
+  <div class="navigation-bar">
+    @for(link of links; track link) {
+    <div class="navigation-link" [routerLink]="link" routerLinkActive="active">
+      {{ link }}
+    </div>
+    }
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
