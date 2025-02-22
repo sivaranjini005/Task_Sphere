@@ -1,20 +1,24 @@
 .main-container {
     display: grid;
     grid-template-rows: auto 1fr;
-    padding: 8px;
 }
 
 .navigation-bar {
     display: flex;
     justify-content: space-around;
     font-size: xx-large;
+    background-color: #009485;
     border-bottom:  1px solid goldenrod;
+    padding: 4px;
 }
 
 .navigation-bar .navigation-link {
     cursor: pointer;
+    color: whitesmoke;
+    opacity: 0.5;
 }
 
 .navigation-bar .active {
-    color: goldenrod;
+    color: whitesmoke;
+    opacity: 1;
 }
