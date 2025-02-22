@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div class="login-header">Please Log In</div>
+    <div class="login-form">
+        <form [formGroup]="loginForm">
+            <div class="username">
+                <input type="text" formControlName="userName">
+            </div>
+            <div class="password">
+                <input type="password" formControlName="password">
+            </div>
+        </form> 
+        <div class='actions'>
+            <button 
+            [disabled]="loginForm.invalid"
+            (click)="logIn()">
+                login
+            </button>
+        </div>
+    </div>
+</div>

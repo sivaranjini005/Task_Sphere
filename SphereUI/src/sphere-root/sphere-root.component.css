@@ -1,0 +1,24 @@
+.main-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.navigation-bar {
+    display: flex;
+    column-gap: 10%;
+    font-size: x-large;
+    background-color: #009485;
+    border-bottom: 1px solid goldenrod;
+    padding: 8px 16px;
+}
+
+.navigation-bar .navigation-link {
+    cursor: pointer;
+    color: whitesmoke;
+    opacity: 0.5;
+}
+
+.navigation-bar .active {
+    color: whitesmoke;
+    opacity: 1;
+}

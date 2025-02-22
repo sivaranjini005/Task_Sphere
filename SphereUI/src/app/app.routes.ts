@@ -1,22 +1,24 @@
 import { Routes } from '@angular/router';
-import { MainSectionComponent } from '../components/main-section/main-section.component';
-
+import { LoginComponent } from '../components/login/login.component';
+import { SphereRootComponent } from '../sphere-root/sphere-root.component';
+import { HomeComponent } from '../components/home/home.component';
+import { TaskListComponent } from '../components/task-list/task-list.component';
+import { HistoryComponent } from '../components/history/history.component';
+import { authGuard } from '../guards/auth.guard';
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: '/Home',
-        pathMatch: 'full'
-    },
-    {
-        path: 'Home',
-        component: MainSectionComponent
-    },
-    {
-        path: 'TaskList',
-        component: MainSectionComponent
-    },
-    {
-        path: 'Completed',
-        component: MainSectionComponent
-    },
+  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    component: SphereRootComponent,
+    canActivate: [authGuard], 
+    canActivateChild: [authGuard],
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'tasklist', component: TaskListComponent },
+      { path: 'history', component: HistoryComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+    ],
+  },
+  { path: '**', redirectTo: '/login' },
 ];

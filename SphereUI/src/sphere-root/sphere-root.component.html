@@ -1,0 +1,15 @@
+<div class="main-container">
+    <div class="navigation-bar">
+      @for(linkObj of links; track linkObj.path) {
+      <div class="navigation-link" [routerLink]="linkObj.path" routerLinkActive="active">
+        {{ linkObj.navLable }}
+      </div>
+      }
+      <div>
+        <button (click)="logOut()">logOut</button>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+</div>
