@@ -1,0 +1,39 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.login-header {
+  font-size: xx-large;
+  padding: 12px;
+}
+
+.login-form {
+  display: grid;
+  row-gap: 12px;
+}
+
+form {
+  display: grid;
+  row-gap: 12px;
+}
+
+.username,
+.password {
+  display: grid;
+}
+
+/* input  */
+#userName, #password {
+  width: 220px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+label {
+  font-weight: 700;
+}
+
