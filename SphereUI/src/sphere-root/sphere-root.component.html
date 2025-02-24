@@ -2,7 +2,8 @@
     <div class="navigation-bar">
       @for(linkObj of links; track linkObj.path) {
       <div class="navigation-link" [routerLink]="linkObj.path" routerLinkActive="active">
-        {{ linkObj.navLable }}
+        <span class="nav-icon"><mat-icon>{{ linkObj.icon }}</mat-icon></span>
+        <span class="nav-text">{{ linkObj.navLable }}</span>
       </div>
       }
       <div class="logout">
