@@ -11,6 +11,7 @@
   padding: 12px;
 }
 
+/* form and actions */
 .login-form {
   display: grid;
   row-gap: 12px;
@@ -35,5 +36,27 @@ form {
 
 label {
   font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+}
+
+.login-button {
+  background-color: #568203;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.login-button:disabled {
+  opacity: 0.5;
+}
+
+.login-button:not(:disabled):hover {
+  background-color:cadetblue;
 }
 

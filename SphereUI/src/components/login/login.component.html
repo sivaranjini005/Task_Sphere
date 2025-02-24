@@ -1,5 +1,5 @@
 <div class="login-container">
-    <div class="login-header">Please Log In</div>
+    <div class="login-header">Please Log in</div>
     <div class="login-form">
       <form [formGroup]="loginForm">
         <div class="username">
@@ -12,7 +12,9 @@
         </div>
       </form>
       <div class="actions">
-        <button [disabled]="loginForm.invalid" (click)="logIn()">login</button>
+        <button 
+        class="login-button"
+        [disabled]="loginForm.invalid" (click)="logIn()">Login</button>
       </div>
     </div>
   </div>
