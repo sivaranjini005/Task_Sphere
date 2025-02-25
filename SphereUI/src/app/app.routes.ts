@@ -5,8 +5,10 @@ import { HomeComponent } from '../components/home/home.component';
 import { TaskListComponent } from '../components/task-list/task-list.component';
 import { HistoryComponent } from '../components/history/history.component';
 import { authGuard } from '../guards/auth.guard';
+import { SignupComponent } from '../components/signup/signup.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: '',
     component: SphereRootComponent,

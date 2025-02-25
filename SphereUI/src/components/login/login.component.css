@@ -134,3 +134,7 @@ input:focus {
 .signup-btn:hover {
   text-decoration: underline;
 }
+
+.error {
+  color:red;
+}

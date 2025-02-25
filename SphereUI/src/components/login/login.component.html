@@ -6,17 +6,32 @@
         <div class="username">
           <label for="userName">User Name:</label>
           <input type="text" id="userName" formControlName="userName" autocomplete="off">
+          @if(loginForm.get('userName')?.invalid && (loginForm.get('userName')?.touched || loginForm.get('userName')?.dirty)) {
+            <div class="error">
+              <small>User Name is required.</small>
+            </div>
+          }
         </div>
         <div class="password">
           <label for="password">Password:</label>
           <input type="password" id="password" formControlName="password">
+          @if(loginForm.get('password')?.invalid && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)){
+            <div class="error">
+              @if(loginForm.get('password')?.errors?.['required']) {
+                <small>Password is required.</small>
+              }
+              @if(loginForm.get('password')?.errors?.['minlength']) {
+                <small>Password must be at least 8 characters long.</small>
+              }
+            </div>
+          }
         </div>
       </form>
       <div class="actions">
         <button class="login-button" [disabled]="loginForm.invalid" (click)="logIn()">Login</button>
         <div class="signup">
           <span class="signup-text">New Here?</span>
-          <button class="signup-btn">Sign Up</button>
+          <button class="signup-btn" (click)="goToSignUp()">Sign Up</button>
         </div>
       </div>
     </div>
