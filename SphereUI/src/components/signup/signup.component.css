@@ -5,7 +5,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: url('../../assets/signup-background.jpg') no-repeat center center;
+    background: url('../../../public/assets/signup-background.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
   }
