@@ -1,9 +1,14 @@
 from sqlmodel import create_engine, Session
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
+import os
 
-database_url = "postgresql://postgres:admin@localhost:5432/task_manager"
+load_dotenv()
 
-engine = create_engine(database_url, echo = True)
+Database_URL = os.getenv("database_url")
+
+engine = create_engine(Database_URL, echo = True)
+
 
 SessionLocal = sessionmaker(autocommit = False, autoflush = False, bind= engine)
 
