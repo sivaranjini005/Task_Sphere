@@ -2,4 +2,11 @@ fastapi[all]
 sqlmodel
 typing
 datetime
-psycopg2-binary
+uvicorn
+sqlalchemy
+psycopg2-binary  # Required for PostgreSQL
+python-dotenv  # For .env file management
+passlib[bcrypt]  # For password hashing
+pyjwt  # JSON Web Token (JWT) support
+python-multipart  # Required for OAuth2 authentication
+alembic  # For database migrations 
