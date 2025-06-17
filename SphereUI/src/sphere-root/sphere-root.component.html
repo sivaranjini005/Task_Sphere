@@ -1,0 +1,16 @@
+<div class="main-container">
+    <div class="navigation-bar">
+      @for(linkObj of links; track linkObj.path) {
+      <div class="navigation-link" [routerLink]="linkObj.path" routerLinkActive="active">
+        <span class="nav-icon"><mat-icon>{{ linkObj.icon }}</mat-icon></span>
+        <span class="nav-text">{{ linkObj.navLable }}</span>
+      </div>
+      }
+      <div class="logout">
+        <button class="logout-btn" mat-button (click)="logOut()">Logout</button>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+</div>
